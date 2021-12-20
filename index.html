@@ -8,25 +8,33 @@
 		<script src="velha.js"></script>
 	</head>
 	<body>
-		<div id="boas-vindas">
-			<h2>Seja bem-vindo ao jogo, clique para iniciar</h2>
-			<input type="button" onclick="js:inicia()" value="iniciar">
-		</div>
 		
 	<div id="jogo">
 		<div id="grade">
-			<button id="bt_0_0" onclick="js:clicado(this)" />
-			<button id="bt_0_1" onclick="js:clicado(this)" />
-			<button id="bt_0_2" onclick="js:clicado(this)" />
+			<button id="bt1" onclick="js:Myturn(this)"></button>
+			<button id="bt2" onclick="js:Myturn(this)"></button>
+			<button id="bt3" onclick="js:Myturn(this)"></button>
 			
-			<button id="bt_1_0" onclick="js:clicado(this)" />
-			<button id="bt_1_1" onclick="js:clicado(this)" />
-			<button id="bt_1_2" onclick="js:clicado(this)" />
+			<button id="bt4" onclick="js:Myturn(this)"></button>
+			<button id="bt5" onclick="js:Myturn(this)"></button>
+			<button id="bt6" onclick="js:Myturn(this)"></button>
 			
-			<button id="bt_2_0" onclick="js:clicado(this)" />
-			<button id="bt_2_1" onclick="js:clicado(this)" />
-			<button id="bt_2_2" onclick="js:clicado(this)" />
+			<button id="bt7" onclick="js:Myturn(this)"></button>
+			<button id="bt8" onclick="js:Myturn(this)"></button>
+			<button id="bt9" onclick="js:Myturn(this)"></button>
 		</div>
+	</div>
+	<div id="opcao">
+		<span>Escolha uma das opções</span>
+		<div id="x" class="x" onclick="js:escolher('X')">X</div>
+		<div id="o" class="o" onclick="js:escolher('O')">O</div>
+	</div>
+
+	<div id="first"><b id="text"></b><button onclick="fechar('first')">INICIAR</button></div>
+	<div id="final">
+		<b id="txtFinal"></b>
+		<div onclick="fechar('final')">X</div>
+		<button onclick="location.reload()">REINICIAR</button>
 	</div>
 	</body>
 </html>
