@@ -1,13 +1,158 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
 #grade {
 	display: grid;
-	grid-template-columns: 100px 100px 100px;
-	grid-template-rows: 100px 100px 100px;
+	grid-template-columns: 200px 200px 200px;
+	grid-template-rows: 200px 200px 200px;
 }
 
 #grade button {
-	font-size: 50pt;
+	font-size: 100pt;
+	cursor: pointer;
 }
 
 #jogo{
-	display:none;
+	position: absolute;
+	display:grid;	
+	margin: 0 auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#opcao, #first, #final{
+    width: 600px;
+    height: 600px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 95%;
+}
+#opcao span{
+    font-size: 30px;
+    line-height:100px;
+    color: white;
+}
+#opcao .x, #opcao .o{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    margin: 30px auto;
+    font-size: 200px;
+    line-height: 200px;
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px gray;
+}
+#opcao .x:hover, #opcao .o:hover{
+    background-color: rgb(212, 212, 64);
+}
+#first, #final{    
+    background-color: yellowgreen;  
+    display: none;
+}
+
+
+#first b, #final b{
+    font-size: 50px;
+    line-height:150px;
+}
+
+#first button, #final button{
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 0 auto;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-weight: bold;
+}
+
+#final div{
+    position: relative;
+    color: black;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    float: right;
+    cursor: pointer;
+}
+#final div:hover{
+    background-color: rgb(194, 18, 18);
+    color: white;
+}
+
+
+@media screen and (max-width: 550px) {
+    #grade {
+		display: grid;
+		grid-template-columns: 150px 150px 150px;
+		grid-template-rows: 150px 150px 150px;		
+	}
+	
+	#grade button {
+		font-size: 80px;
+	}
+	
+    #opcao, #first, #final{
+        width: 450px;
+        height: 450px;
+    }
+    #opcao span{
+        font-size: 20px;
+        line-height:100px;
+    }
+    #opcao .x, #opcao .o{
+        width: 150px;
+        height: 150px;
+        margin-top: 0;
+		margin-bottom: 15px;
+        font-size: 150px;
+        line-height: 150px;
+    }
+
+    #final div{
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+    #first b, #final b{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #grade {
+		display: grid;
+		grid-template-columns: 100px 100px 100px;
+		grid-template-rows: 100px 100px 100px;		
+	}
+	
+	#grade button {
+		font-size: 50px;
+	}
+	
+    #opcao, #first, #final{
+        width: 320px;
+        height: 350px;
+    }
+    #opcao span{
+        font-size: 20px;
+        line-height:70px;
+    }
+    #opcao .x, #opcao .o{
+        width: 120px;
+        height: 120px;
+        font-size: 100px;
+        line-height: 120px;
+    }	
 }
