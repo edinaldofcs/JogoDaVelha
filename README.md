@@ -1,5 +1,7 @@
 # Jogo da Velha
 
+Link: https://edinaldofcs.github.io/JogoDaVelha/
+
 Funcionalidades:
 
 - Escolha de "x" ou "o"
